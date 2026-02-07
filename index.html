@@ -7,7 +7,7 @@
   <title>Hamed Asadi | Environmental Engineering Researcher</title>
 
   <!-- SEO -->
-  <meta name="description" content="MSc Environmental Engineering. Prospective PhD researcher in climate change. biodiversity. GIS-based spatial modeling. environmental assessment. ecotourism." />
+  <meta name="description" content="MSc Environmental Engineering. Prospective PhD researcher in climate change, biodiversity, GIS-based spatial modeling, environmental assessment, ecotourism." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://hamed-asadi.github.io/" />
 
@@ -73,15 +73,8 @@
       font-size:14px;
     }
 
-    h1{
-      margin: 10px 0 6px;
-      line-height:1.2;
-    }
-
-    h2{
-      margin: 0 0 10px;
-      line-height:1.25;
-    }
+    h1{ margin: 10px 0 6px; line-height:1.2; }
+    h2{ margin: 0 0 10px; line-height:1.25; }
 
     .subtitle{
       color:var(--muted);
@@ -89,10 +82,7 @@
       line-height:1.6;
     }
 
-    .small{
-      color:var(--muted);
-      font-size: 14px;
-    }
+    .small{ color:var(--muted); font-size: 14px; }
 
     p{ margin: 10px 0; }
     ul{ margin: 10px 0 0; padding-left: 22px; }
@@ -103,7 +93,10 @@
       border-radius:50%;
       border:1px solid var(--border);
       display:block;
+      cursor:pointer;
+      transition: transform .2s ease;
     }
+    .profile:hover{ transform: scale(1.03); }
 
     nav{
       margin: 18px 0 8px;
@@ -121,9 +114,7 @@
       font-size: 14px;
       border: 1px solid transparent;
     }
-    nav a:hover{
-      border-color: var(--border);
-    }
+    nav a:hover{ border-color: var(--border); }
 
     section{
       margin-top: 22px;
@@ -140,6 +131,31 @@
       text-align:center;
     }
 
+    /* Image modal */
+    .modal{
+      position:fixed;
+      inset:0;
+      background: rgba(0,0,0,.75);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+    }
+    .modal img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:16px;
+      box-shadow: var(--shadow);
+    }
+    .modal span{
+      position:absolute;
+      top:20px;
+      right:30px;
+      font-size:28px;
+      color:#fff;
+      cursor:pointer;
+    }
+
     @media (max-width: 520px){
       .wrap{ padding: 22px 16px 60px; }
       nav a{ font-size: 13px; padding: 8px 10px; }
@@ -149,187 +165,160 @@
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- Dark mode -->
-    <div class="topbar">
-      <button id="themeBtn" class="btn">🌙 Dark</button>
-    </div>
-
-    <!-- Photo -->
-    <div style="margin-top:10px;">
-      <img src="assets/profile.jpg" alt="Hamed Asadi" class="profile">
-    </div>
-
-    <!-- Header -->
-    <h1>Hamed Asadi</h1>
-    <div class="subtitle">
-      MSc Environmental Engineering · Prospective PhD Researcher<br>
-      Climate Change · Biodiversity · GIS & Spatial Modeling . Environmental assessment . Ecotourism
-    </div>
-
-    <p class="small">
-      <a href="mailto:hamed.asadi.env@gmail.com">hamed.asadi.env@gmail.com</a> ·
-      <a href="https://scholar.google.com/citations?user=C6w1cbcAAAAJ&hl=en" target="_blank">Google Scholar</a> ·
-      <a href="https://orcid.org/0000-0003-0435-5733" target="_blank">ORCID</a> ·
-      <a href="https://www.researchgate.net/profile/Hamed-Asadi-14" target="_blank">ResearchGate</a> ·
-      <a href="https://www.linkedin.com/in/hamed-asadi-0519449a/" target="_blank">LinkedIn</a>
-    </p>
-
-    <!-- Nav -->
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#skills">Skills</a>
-      <a href="#honors">Honors</a>
-      <a href="#service">Academic Service</a>
-      <a href="#cv">CV</a>
-      <a href="#docs">Documents</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I hold an MSc degree in Environmental Engineering with a research background in climate change impact assessment,
-        biodiversity conservation, GIS-based spatial modeling and ecotourism.
-      </p>
-      <p>
-        I am currently seeking PhD opportunities in Australia or New Zealand within research groups focused on applied,
-        data-driven environmental research.
-      </p>
-    </section>
-
-    <!-- Research -->
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Climate change impacts on biodiversity</li>
-        <li>Species distribution modelling (SDMs) and climate refugia</li>
-        <li>GIS-based spatial analysis for conservation planning</li>
-        <li>Multi-criteria decision analysis (MCDA) in environmental planning</li>
-        <li>Sustainable land-use and ecotourism planning</li>
-      </ul>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li>
-          Ahmadi, M., Nawaz, M. A., <b>Asadi, H.</b>, et al. (2024).
-          <i>Protecting alpine biodiversity in the Middle East from climate change.</i>
-          Diversity and Distributions.
-          <a href="https://doi.org/10.1111/ddi.13826" target="_blank">DOI</a>
-        </li>
-        <li>
-          <b>Asadi, H.</b>, Soffianian, A., Hemami, M.-R., et al. (2022).
-          <i>A hybrid GIS-OWA and DANP method for ecotourism attraction assessment.</i>
-          GeoJournal.
-          <a href="https://doi.org/10.1007/s10708-021-10564-6" target="_blank">DOI</a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>R / RStudio (SDMs, data analysis, visualization)</li>
-        <li>ArcGIS & spatial modelling</li>
-        <li>Climate data (CMIP6, SSP scenarios)</li>
-        <li>MCDA methods (DEMATEL, DANP, OWA)</li>
-      </ul>
-    </section>
-
-    <!-- Honors -->
-    <section id="honors">
-      <h2>Honors & Certifications</h2>
-      <ul>
-        <li>Ranked 18th in Iranian National MSc Entrance Exam (2013)</li>
-        <li>Exceptionally Talented Student (2013)</li>
-        <li>PTE Academic: Overall 80 (valid until Dec 2027)</li>
-      </ul>
-    </section>
-
-    <!-- Service -->
-    <section id="service">
-      <h2>Academic Service</h2>
-      <p>
-        Peer Reviewer for international peer-reviewed journals in environmental science and ecology.
-      </p>
-      <p class="small">
-        ORCID: <a href="https://orcid.org/0000-0003-0435-5733" target="_blank">0000-0003-0435-5733</a>
-      </p>
-    </section>
-
-    <!-- CV -->
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <p class="small">
-        Academic CV (3 pages) – includes research profile, publications, methods & tools (R/GIS/SDMs), and academic service.
-      </p>
-      <p>
-        <a href="assets/Hamed_Asadi_CV_AUNZ_TNR.pdf">Download Academic CV (PDF)</a>
-      </p>
-      <p class="small">
-        English Proficiency: PTE Academic (Overall 80, valid until Dec 2027)
-      </p>
-    </section>
-
-    <!-- Documents -->
-    <section id="docs">
-      <h2>Supporting Documents (Optional)</h2>
-      <p class="small">
-        Work reference letters and recommendation letters are available upon request and are provided
-        directly during formal PhD or research applications.
-      </p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:hamed.asadi.env@gmail.com">hamed.asadi.env@gmail.com</a>
-      </p>
-    </section>
-
-    <p class="small footer">
-      © 2026 Hamed Asadi
-    </p>
-
+  <div class="topbar">
+    <button id="themeBtn" class="btn">🌙 Dark</button>
   </div>
 
-  <script>
-    (function(){
-      const saved = localStorage.getItem("theme");
-      if(saved){
-        document.documentElement.setAttribute("data-theme", saved);
-      } else {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-      }
+  <div style="margin-top:10px;">
+    <img src="assets/profile.jpg" alt="Hamed Asadi" class="profile" id="profileImg">
+  </div>
 
-      const btn = document.getElementById("themeBtn");
-      function sync(){
-        btn.textContent =
-          document.documentElement.getAttribute("data-theme") === "dark"
-          ? "☀️ Light"
-          : "🌙 Dark";
-      }
+  <h1>Hamed Asadi</h1>
+  <div class="subtitle">
+    MSc Environmental Engineering · Prospective PhD Researcher<br>
+    Climate Change · Biodiversity · GIS & Spatial Modeling · Environmental Assessment · Ecotourism
+  </div>
+
+  <p class="small">
+    <a href="mailto:hamed.asadi.env@gmail.com">hamed.asadi.env@gmail.com</a> ·
+    <a href="https://scholar.google.com/citations?user=C6w1cbcAAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+    <a href="https://orcid.org/0000-0003-0435-5733" target="_blank">ORCID</a> ·
+    <a href="https://www.researchgate.net/profile/Hamed-Asadi-14" target="_blank">ResearchGate</a> ·
+    <a href="https://www.linkedin.com/in/hamed-asadi-0519449a/" target="_blank">LinkedIn</a>
+  </p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+    <a href="#honors">Honors</a>
+    <a href="#pte">English / PTE</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      MSc Environmental Engineering with research experience in climate change impact assessment,
+      biodiversity conservation, GIS-based spatial modeling, and ecotourism.
+    </p>
+    <p>
+      Currently seeking PhD opportunities in Australia or New Zealand in applied, data-driven environmental research.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Climate change impacts on biodiversity</li>
+      <li>Species distribution modeling (SDMs)</li>
+      <li>GIS-based conservation planning</li>
+      <li>Multi-criteria decision analysis (MCDA)</li>
+      <li>Sustainable land-use & ecotourism planning</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>
+        Ahmadi et al. (2024). <i>Protecting alpine biodiversity in the Middle East from climate change.</i>
+        Diversity and Distributions. <a href="https://doi.org/10.1111/ddi.13826" target="_blank">DOI</a>
+      </li>
+      <li>
+        <b>Asadi, H.</b> et al. (2022). <i>A hybrid GIS-OWA and DANP method for ecotourism attraction assessment.</i>
+        GeoJournal. <a href="https://doi.org/10.1007/s10708-021-10564-6" target="_blank">DOI</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>R / RStudio (SDMs, analysis, visualization)</li>
+      <li>ArcGIS & spatial modeling</li>
+      <li>Climate data (CMIP6, SSPs)</li>
+      <li>MCDA (DEMATEL, DANP, OWA)</li>
+    </ul>
+  </section>
+
+  <section id="honors">
+    <h2>Honors & Certifications</h2>
+    <ul>
+      <li>Ranked 18th – Iranian National MSc Entrance Exam</li>
+      <li>Exceptionally Talented Student</li>
+      <li>PTE Academic – Overall 80 (Valid until Dec 2027)</li>
+    </ul>
+  </section>
+
+  <section id="pte">
+    <h2>English Proficiency / PTE Academic</h2>
+    <p>
+      Demonstrated English proficiency through the Pearson Test of English (PTE Academic),
+      meeting language requirements for PhD programs in Australia and New Zealand.
+    </p>
+    <ul>
+      <li>Overall Score: <b>80</b></li>
+      <li>Valid Until: December 2027</li>
+      <li>Academic & research communication ready</li>
+    </ul>
+  </section>
+
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <p class="small">
+      Academic CV including research profile, publications, methods & academic service.
+    </p>
+    <p>
+      <a href="assets/Hamed_Asadi_CV_AUNZ_TNR.pdf">Download Academic CV (PDF)</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hamed.asadi.env@gmail.com">hamed.asadi.env@gmail.com</a></p>
+  </section>
+
+  <p class="small footer">© 2026 Hamed Asadi</p>
+
+</div>
+
+<!-- Image Modal -->
+<div class="modal" id="imgModal">
+  <span id="closeModal">&times;</span>
+  <img src="assets/profile.jpg" alt="Hamed Asadi">
+</div>
+
+<script>
+  // Dark mode
+  (function(){
+    const saved = localStorage.getItem("theme");
+    document.documentElement.setAttribute(
+      "data-theme",
+      saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    );
+    const btn = document.getElementById("themeBtn");
+    const sync = () => btn.textContent =
+      document.documentElement.getAttribute("data-theme") === "dark" ? "☀️ Light" : "🌙 Dark";
+    sync();
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
       sync();
+    };
+  })();
 
-      btn.addEventListener("click", ()=>{
-        const next =
-          document.documentElement.getAttribute("data-theme") === "dark"
-          ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
-        sync();
-      });
-    })();
-  </script>
+  // Image modal
+  const modal = document.getElementById("imgModal");
+  document.getElementById("profileImg").onclick = () => modal.style.display = "flex";
+  document.getElementById("closeModal").onclick = () => modal.style.display = "none";
+  modal.onclick = e => { if(e.target === modal) modal.style.display = "none"; };
+</script>
+
 </body>
 </html>
